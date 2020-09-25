@@ -1,0 +1,12 @@
+[
+  {
+    "cmd": "c:\\windows\\notepad.exe",
+    "args": "d:\\Dev\\post.json",
+    "time": ["4:09"]
+  },
+  {
+    "cmd": "c:\\windows\\notepad.exe",
+    "args": "d:\\Dev\\page.json",
+    "time": ["4:09"]
+  }
+]

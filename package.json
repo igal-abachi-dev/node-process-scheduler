@@ -1,0 +1,30 @@
+{
+  "name": "@nxt-web/node-process-scheduler",
+  "version": "1.0.0",
+  "description": "cron like hourly scheduling in node.js for PM2 manager",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igal-abachi-dev/node-process-scheduler.git"
+  },
+  "keywords": [],
+  "author": "igal abachi <igal.abachi.workmail@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igal-abachi-dev/node-process-scheduler/issues"
+  },
+  "homepage": "https://github.com/igal-abachi-dev/node-process-scheduler#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "eventemitter3": "^4.0.7",
+    "lodash": "^4.17.20",
+    "luxon": "^1.25.0",
+    "mnemonist": "^0.38.0",
+    "pino": "^6.6.1",
+    "pino-pretty": "^4.2.1"
+  }
+}
