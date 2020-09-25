@@ -12,3 +12,25 @@ cron like hourly scheduling in node.js for PM2 manager
     "pino": "^6.6.1",
     }
 ```
+
+
+# jobs.json
+```javascript
+[
+  {//windows:
+    "cmd": "c:\\windows\\notepad.exe",
+    "args": "d:\\Dev\\post.json",
+    "time": ["4:09"] //utc
+  },
+  {//ubuntu:
+    "cmd": "/var/www/git/proj1/script.sh",
+    "args": "/abc",
+    "time": ["4:09"] //utc
+  }
+  {//ubuntu:
+    "cmd": "/var/www/git/proj2/nodeApp.js",
+    "args": "--test",
+    "time": ["5:00","8:20","19:00"] //utc
+  }
+]
+```
