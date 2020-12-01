@@ -68,14 +68,17 @@ async function runJobsLoop() {
     for (let i = 0; i < jobs.size; i++) {
         const job = jobs.shift();
         //
-        const jobTime = timeByHour(((job || {}).time || [null])[0]); //support array of specific hours
-        const jobId = (i + 1);
+        const times = ((job || {}).time || [null]);
+        for (let j = 0; j < times.length; j++) {
+            const jobTime = timeByHour(times[j]);
+            const jobId = (i + 1);
 
-        if (shouldExecuteScheduledJob(jobId, jobTime, utc)) {
-            //dont wait job to end, keep looping for next jobs
-            execJob((job || {})).then(() => {
-                console.log(`Job ${jobId}: Execution Ended.`)
-            });
+            if (shouldExecuteScheduledJob(jobId, jobTime, utc)) {
+                //dont wait job to end, keep looping for next jobs
+                execJob((job || {})).then(() => {
+                    console.log(`Job ${jobId}: Execution Ended.`)
+                });
+            }
         }
         jobs.push(job);
     }
