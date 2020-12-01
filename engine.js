@@ -40,6 +40,10 @@ const spawnAsync = async function (proc) {
 
         const procName = `[${_proc.cmd}${_proc.args.length == 0 ? "" : " " + _proc.args[0]}]`;
         console.log(`starting ${procName}...`);
+		//const pOptions = {
+		//	cwd:path.dirname(_proc.cmd), 
+		//	env: process.env
+		//};
         const childProc = spawn(_proc.cmd, _proc.args); //can hang if av/voodooshield config cmd run from user
         _.assign(_proc, {
             isRunning: true,
